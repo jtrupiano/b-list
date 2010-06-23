@@ -1,6 +1,11 @@
 = b-list
 
-Description goes here.
+This is a total spike.
+
+* No ability to identify specific "zones" to protect, e.g. anything under /admin
+* Needs a "successfully authenticated" hook to allow you to do post-processing, e.g. insert a record into the users table in your database
+* Verify that lists with more than 20 users are fully searched, consider using the #get_member_of_list twitter_oauth method
+* Many of the helper methods are brittle (url reconstruction, params and session handling)
 
 == Note on Patches/Pull Requests
  

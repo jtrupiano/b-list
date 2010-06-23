@@ -37,7 +37,7 @@ module B
         request_token = twitter_client.request_token(:oauth_callback => oauth_callback_url)
         session[:request_token]         = request_token.token
         session[:request_token_secret]  = request_token.secret
-        session[:requested_path]          = @env["PATH_INFO"]
+        session[:requested_path]        = @env["PATH_INFO"]
         [302, {'Location' => request_token.authorize_url, 'Content-Type' => 'text/html'}, ["Redirecting to Twitter for authentication"]]
       end
     end
